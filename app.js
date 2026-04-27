@@ -38,7 +38,7 @@ const PRIORITY_MAP = {
 
 function buildWeeklyList() {
   if (typeof WEEKLY_REPORTS !== 'undefined' && WEEKLY_REPORTS.length) {
-    return WEEKLY_REPORTS;
+    return WEEKLY_REPORTS.filter(w => w && w.week);
   }
   const byWeek = {};
   const gameReports  = (typeof REPORTS_BY_INDUSTRY !== 'undefined') ? (REPORTS_BY_INDUSTRY.game  || []) : [];
